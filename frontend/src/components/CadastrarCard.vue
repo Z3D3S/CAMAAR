@@ -61,6 +61,7 @@ const PostMembers = async () =>{
           placeholder="Digite seu email"
           label="E-Mail"
           type="email"
+          name="email"
           v-model="users.email"
           class="col-12"
           lazy-rules
@@ -78,7 +79,7 @@ const PostMembers = async () =>{
           :rules="[val => !!val || 'Senha Obrigatória']"
           data-test-senha="senha"
         ></q-input>
-		  
+
 		<q-btn
           rounded
           color="secondary"
@@ -87,14 +88,15 @@ const PostMembers = async () =>{
           @click="PostMembers"
           data-test-button-register="registrar"
         >Efetuar o Registro</q-btn>
-		  
+
 		<a href="/#/"><q-btn
           rounded
           color="secondary"
           class="col-12"
           size="lg"
-          >Voltar</q-btn></a>  
-		
+          data-test-button-voltar="voltar"
+          >Voltar</q-btn></a>
+
       </q-form>
     </q-card>
   </div>
